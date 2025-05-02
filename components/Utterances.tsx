@@ -18,7 +18,7 @@ export function Utterances() {
     const utterancesContainer = containerRef.current
     if (utterancesContainer) {
       utterancesContainer.innerHTML = ''
-      utterancesContainer.appendChild(script)
+      utterancesContainer.append(script)
     }
 
     return () => {
