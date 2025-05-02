@@ -5,13 +5,15 @@
       "src": "package.json",
       "use": "@vercel/next",
       "config": {
-        "installCommand": "pnpm install --no-frozen-lockfile"
+        "installCommand": "pnpm install --no-frozen-lockfile",
+        "buildCommand": "pnpm run build"
       }
     }
   ],
   "build": {
     "env": {
-      "NODE_VERSION": "18.x"
+      "NODE_VERSION": "18.x",
+      "NEXT_TELEMETRY_DISABLED": "1"
     }
   }
 }
