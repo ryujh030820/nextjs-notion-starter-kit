@@ -15,5 +15,11 @@
     "@typescript-eslint/naming-convention": "off",
     "simple-import-sort/imports": "off",
     "unicorn/prefer-dom-node-append": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "extends": ["plugin:@typescript-eslint/recommended"]
+    }
+  ]
 }
