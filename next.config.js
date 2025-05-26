@@ -36,5 +36,15 @@ export default withBundleAnalyzer({
   },
 
   // See https://react-tweet.vercel.app/next#troubleshooting
-  transpilePackages: ['react-tweet']
+  transpilePackages: ['react-tweet'],
+
+  // 한글 URL 처리를 위한 설정
+  i18n: {
+    locales: ['ko'],
+    defaultLocale: 'ko'
+  },
+
+  // 정적 페이지 생성 시 한글 URL 처리
+  trailingSlash: true,
+  output: 'standalone'
 })
