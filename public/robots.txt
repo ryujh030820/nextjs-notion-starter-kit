@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.ryujh030820.com
-
-# Sitemaps
-Sitemap: https://www.ryujh030820.com/sitemap.xml

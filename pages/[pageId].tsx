@@ -32,20 +32,27 @@ export async function getStaticPaths() {
     }
   }
 
-  const siteMap = await getSiteMap()
-
-  const staticPaths = {
-    paths: Object.keys(siteMap.canonicalPageMap).map((pageId) => ({
-      params: {
-        pageId
-      }
-    })),
-    // paths: [],
+  // 빌드 시에도 네트워크 타임아웃 문제를 피하기 위해
+  // 모든 페이지를 미리 생성하지 않고 fallback만 사용
+  return {
+    paths: [],
     fallback: true
   }
 
-  console.log(staticPaths.paths)
-  return staticPaths
+  // const siteMap = await getSiteMap()
+
+  // const staticPaths = {
+  //   paths: Object.keys(siteMap.canonicalPageMap).map((pageId) => ({
+  //     params: {
+  //       pageId
+  //     }
+  //   })),
+  //   // paths: [],
+  //   fallback: true
+  // }
+
+  // console.log(staticPaths.paths)
+  // return staticPaths
 }
 
 export default function NotionDomainDynamicPage(props) {
